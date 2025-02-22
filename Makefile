@@ -4,4 +4,9 @@ run:
 	python manage.py runserver
 migrate:
 	cls
-	python manage.py migrate
+	if "$(app)"=="" (
+		echo App name is required. Use: make migrate app=your_app_name
+		exit /b 1
+	) else (
+		python manage.py makemigrations $(app) && python manage.py migrate
+	)
