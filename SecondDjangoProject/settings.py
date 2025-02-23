@@ -37,8 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'posts.apps.PostsConfig',
-    'onetoone.apps.OnetooneConfig'
+    'posts.apps.PostsConfig'
 ]
 
 MIDDLEWARE = [
